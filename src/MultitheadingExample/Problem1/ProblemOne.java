@@ -2,11 +2,11 @@ package MultitheadingExample.Problem1;
 
 public class ProblemOne {
 
-    private Thread[] allThreads;
+    public static void main(String[] args){
 
-    public ProblemOne(int n){
+        int n = 5;
 
-        allThreads = new Thread[n];
+        Thread[] allThreads = new Thread[n];
 
         for(int i = 0; i < n; i++)
             allThreads[i] = new Thread();
