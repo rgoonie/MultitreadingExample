@@ -6,10 +6,12 @@ public class ProblemOne {
 
         int n = 5;
 
-        Thread[] allThreads = new Thread[n];
+        MyThread[] allThreads = new MyThread[n];
 
-        for(int i = 0; i < n; i++)
-            allThreads[i] = new Thread();
+        for(int i = 0; i < n; i++) {
+            allThreads[i] = new MyThread(i);
+            allThreads[i].start();
+        }
 
     }
 
