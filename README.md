@@ -16,7 +16,7 @@ OOP Homework that I hope teaches me about multithreading
 
 ### Problem 3
 
-* Solve a single producer, single problem using `wait()` and `notifyAll()`.
+* Solve a single producer, single consumer problem using `wait()` and `notifyAll()`.
 * The producer must not overflow the shared buffer, which can happen if the producer is faster than the consumer. If the consumer is faster than the producer, then it must not read the same data more than once. Do not assume anything about the relative speeds (i.e., random producing and consuming speeds) of the producer or consumer.
 
 ### Problem 4
