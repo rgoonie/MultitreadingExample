@@ -35,7 +35,7 @@ public class Producer implements Runnable {
 
         try { while(true) {produceSomething();} }
         catch(Exception e) {
-            System.out.println("Shit when down hill...");
+            System.out.println("Shit when down hill producer side...");
             System.exit(0);
         }
 
