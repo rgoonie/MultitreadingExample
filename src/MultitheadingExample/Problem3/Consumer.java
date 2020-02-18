@@ -29,6 +29,10 @@ public class Consumer implements Runnable {
 
     @Override
     public void run() {
-
+        try { while(true) {consume();} }
+        catch(Exception e) {
+            System.out.println("Shit when down hill consumer side...");
+            System.exit(0);
+        }
     }
 }
