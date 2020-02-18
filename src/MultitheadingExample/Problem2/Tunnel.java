@@ -15,7 +15,12 @@ public class Tunnel {
 
         setPriorities();
     }
-    
+
+    public void runThroughTunnel(){
+        for(Person p : people)
+            p.start();
+    }
+
     private void setPriorities(){
         Arrays.sort(people);
         int priority = Thread.MAX_PRIORITY;
