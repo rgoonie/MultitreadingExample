@@ -10,6 +10,10 @@ public class Consumer implements Runnable {
         myProducer = producer;
     }
 
+    public void setMyProducer(Producer producer){
+        myProducer = producer;
+    }
+
     public void consume() throws Exception{
         Queue<Integer> market = myProducer.getProduce();
 
