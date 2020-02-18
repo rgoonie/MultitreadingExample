@@ -1,11 +1,20 @@
 package MultitheadingExample.Problem2;
 
-public class Person extends Thread {
+public class Person extends Thread implements Comparable<Person>{
 
     private String name;
 
     public Person(String name){
         this.name = name;
+    }
+
+    public String getPersonName(){
+        return name;
+    }
+
+    @Override
+    public int compareTo(Person p){
+        return name.compareTo( p.getPersonName() );
     }
 
     @Override
