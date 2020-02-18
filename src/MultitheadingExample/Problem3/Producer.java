@@ -27,6 +27,7 @@ public class Producer implements Runnable {
         }
 
         produce.add( random.nextInt() );
+        System.out.println("Producer produced something...");
     }
 
     @Override
