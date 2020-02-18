@@ -25,7 +25,7 @@ public class Tunnel {
         Arrays.sort(people);
         int priority = Thread.MAX_PRIORITY;
         for(Person p : people)
-            p.setPriority(priority);
+            p.setPriority(priority--);
     }
 
     private String getRandomName(int len){
