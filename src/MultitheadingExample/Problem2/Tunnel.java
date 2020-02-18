@@ -17,14 +17,20 @@ public class Tunnel {
     }
 
     public void runThroughTunnel(){
-        for(Person p : people)
+        for(Person p : people) {
             p.start();
+
+            try{ /*p.join();*/ }
+            catch(Exception e){ System.out.println("Failed to run join method"); }
+        }
     }
 
     private void setPriorities(){
-        Arrays.sort(people);
+        Person[] sorted = people.clone();
+        Arrays.sort(sorted);
+
         int priority = Thread.MAX_PRIORITY;
-        for(Person p : people)
+        for(Person p : sorted)
             p.setPriority(priority--);
     }
 
