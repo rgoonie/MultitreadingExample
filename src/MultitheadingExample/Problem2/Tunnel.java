@@ -1,16 +1,26 @@
 package MultitheadingExample.Problem2;
 
+import java.util.Arrays;
+
 public class Tunnel {
 
     private Person[] people;
 
-    public Tunnel(int numPeople, int nameLength){
-        people = new Person[numPeople];
+    public Tunnel(int nameLength){
+        people = new Person[10];
 
-        for(int i = 0; i < numPeople; i++){
+        for(int i = 0; i < 10; i++){
             people[i] = new Person( getRandomName(nameLength) );
         }
 
+        setPriorities();
+    }
+    
+    private void setPriorities(){
+        Arrays.sort(people);
+        int priority = Thread.MAX_PRIORITY;
+        for(Person p : people)
+            p.setPriority(priority);
     }
 
     private String getRandomName(int len){
